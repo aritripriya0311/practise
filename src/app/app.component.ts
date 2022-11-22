@@ -9,6 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent implements OnInit {
 
   title = 'launchPad';
+  buttons: string[] = [
+    'Set up your CRM', 'Marketplace apps', 'Recommended for you', 'Generate more leads',
+    'Engage with contacts', 'Manage your deals', 'Measure sales performance', 'Automate your work',
+    'Admin Settings', 'Recents'
+  ];
   flag: string[] = ['false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false'];
 
   ngOnInit(): void {
@@ -20,7 +25,6 @@ export class AppComponent implements OnInit {
   containerSelect(id: number) {
     this.flag = ['false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false']
     this.flag[id] = 'true';
-    console.log(this.flag);
   }
   containerSelectAll() {
     for (let i = 0; i < 10; i++) {
