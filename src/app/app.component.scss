@@ -139,11 +139,22 @@ button:focus {
   background: none !important;
 }
 
+.containers-list {
+  min-height: 540px;
+  max-height: 90vh;
+  overflow-y: scroll;
+  position: relative;
+}
+
 .group-title {
   color: rgb(87, 108, 125);
   margin-left: 12px;
-  // position: sticky;
-  // top: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background: rgb(255, 255, 255);
 }
 
 ul {
@@ -170,4 +181,14 @@ ul {
 
 .fa {
   margin-right: 5px
+}
+
+.class1 {
+  visibility: visible;
+  height: auto;
+}
+
+.class2 {
+  visibility: hidden;
+  height: 0;
 }
