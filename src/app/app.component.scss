@@ -76,7 +76,7 @@ button:hover {
   background: rgb(91, 140, 175, 0.9);
 }
 
-.commandbar-button-all,
+
 button:focus {
   color: rgb(18, 52, 77);
   background: rgb(255, 255, 255);
@@ -99,7 +99,6 @@ button:focus {
   border-image: initial;
   border-radius: 0px;
   background: none;
-  z-index: 2147483645;
 }
 
 #commandbar-control {
@@ -140,6 +139,13 @@ button:focus {
   background: none !important;
 }
 
+.group-title {
+  color: rgb(87, 108, 125);
+  margin-left: 12px;
+  // position: sticky;
+  // top: 0;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -149,23 +155,17 @@ ul {
 .list-group-item {
   border: none;
   background: none;
-  margin-left: 2px;
   border-radius: 0;
   padding: 16px 12px;
   font-weight: 400;
   color: rgb(59, 72, 83);
+  border-left: 4px solid transparent;
 }
 
 .list-group-item:hover {
   border-left: 4px solid blue;
   background: rgba(247, 247, 247, 1);
   transition: background-color 0.3s ease 0s;
-  margin-left: -2px;
-}
-
-.group-title {
-  color: rgb(87, 108, 125);
-  margin-left: 12px;
 }
 
 .fa {
