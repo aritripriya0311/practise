@@ -54,7 +54,7 @@
         <ng-container *ngFor="let button of buttons; let i = index">
           <p class="group-title" *ngIf="i === id || all===true">{{ button }}</p>
           <ul class="list-group" *ngIf="i === id || all===true">
-            <ng-container *ngFor="let tab of tabs[i]">
+            <ng-container *ngFor="let tab of tabs[i] | filter:searchedText">
               <li class="list-group-item">
                 <div class="d-flex list-style">
                   <span class="material-icons">{{ tab.iconName }}</span>
