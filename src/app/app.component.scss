@@ -106,6 +106,7 @@ button:focus {
   min-height: 520px;
   max-height: 95vh;
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -130,7 +131,7 @@ ul {
   border: none;
   background: none;
   border-radius: 0;
-  padding: 16px 12px;
+  padding: 6px 10px;
   font-weight: 400;
   color: rgb(59, 72, 83);
   border-left: 4px solid transparent;
@@ -142,9 +143,13 @@ ul {
   transition: background-color 0.3s ease 0s;
 }
 
-.fa {
+.material-icons {
   margin-right: 5px;
-  border: none;
+}
+
+.list-style {
+  padding-top: 4px;
+  margin-top: 4px;
 }
 
 .search-btn,
