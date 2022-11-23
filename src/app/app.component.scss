@@ -65,8 +65,7 @@
   border: 2px solid transparent;
   height: fit-content;
   padding: 10px 8px;
-  margin-bottom: 0px;
-  margin-right: 0px;
+  margin-bottom: 4px;
   border-radius: 8px;
   width: 100%;
 }
@@ -90,6 +89,8 @@ button:focus {
 }
 
 .right-content {
+  height: 327px;
+  transition: height 0.1s ease-out 0s;
   border: none;
   border-radius: 0px;
   margin-top: 0px;
@@ -98,8 +99,8 @@ button:focus {
 
 .containers-list {
   min-height: 520px;
-  max-height: 90vh;
-  overflow-y: scroll;
+  max-height: 95vh;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -165,12 +166,16 @@ ul {
   background: none !important;
 }
 
-.class1 {
-  visibility: visible;
-  height: auto;
-}
-
-.class2 {
-  visibility: hidden;
-  height: 0;
+.right-footer {
+  background-color: rgb(207, 215, 223);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  padding: 2px 4px;
+  color: rgb(18, 52, 77);
+  font-family: 'SF Pro Text', sans-serif;
+  font-weight: 400;
+  position: relative;
+  top: 43vh;
+  left: 95%
 }

@@ -7,29 +7,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
   title = 'launchPad';
+  searchedText: string = '';
+  all: boolean = false;
+  id: number = -1;
+
   buttons: string[] = [
     'Set up your CRM', 'Marketplace apps', 'Recommended for you', 'Generate more leads',
     'Engage with contacts', 'Manage your deals', 'Measure sales performance', 'Automate your work',
     'Admin Settings', 'Recents'
   ];
-  flag: string[] = ['false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false'];
 
   ngOnInit(): void {
-    for (let i = 0; i < 10; i++) {
-      this.flag[i] = 'true'
-    }
+    this.all = true;
   }
 
   containerSelect(id: number) {
-    this.flag = ['false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false']
-    this.flag[id] = 'true';
+    this.all = false;
+    this.id = id;
   }
   containerSelectAll() {
-    for (let i = 0; i < 10; i++) {
-      this.flag[i] = 'true'
-    }
+    this.all = true;
   }
-
+  filterResults() {
+    console.log(this.searchedText);
+  }
 }
