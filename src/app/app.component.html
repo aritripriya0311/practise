@@ -2,7 +2,6 @@
   <!-- LEFT  PANEL -->
   <div class="d-flex flex-column justify-content-between left-panel">
     <!-- left-title -->
-
     <div class="d-flex align-items-center title">
       <img src="../assets/svg/rocket.svg" alt="" />
       <div class="d-flex flex-column" style="margin-left: 8.5px; padding: 0">
@@ -12,86 +11,19 @@
     </div>
 
     <!-- left-content -->
-    <div class="flex-grow-1">
-      <div
-        class="d-flex left-container"
-        aria-hidden="true"
-        id="commandbar-search-tab-container"
-      >
-        <div class="commandbar d-flex flex-column">
-          <button
-            (click)="containerSelectAll()"
-            aria-label="search-filter-all"
-            class="commandbar-button-all"
-          >
-            All</button
-          ><button
-            (click)="containerSelect(0)"
-            aria-label="search-filter-Set up your CRM"
-            class="commandbar-button"
-          >
-            <span class="commandbar-span">Set up your CRM</span></button
-          ><button
-            (click)="containerSelect(1)"
-            aria-label="search-filter-Marketplace apps"
-            class="commandbar-button"
-          >
-            <span class="commandbar-span">Marketplace apps</span></button
-          ><button
-            (click)="containerSelect(2)"
-            aria-label="search-filter-Recommended for you"
-            class="commandbar-button"
-          >
-            <span class="commandbar-span">Recommended for you</span></button
-          ><button
-            (click)="containerSelect(3)"
-            aria-label="search-filter-Generate more leads"
-            class="commandbar-button"
-          >
-            <span class="commandbar-span">Generate more leads</span></button
-          ><button
-            (click)="containerSelect(4)"
-            aria-label="search-filter-Engage with contacts"
-            class="commandbar-button"
-          >
-            <span class="commandbar-span">Engage with contacts</span></button
-          ><button
-            (click)="containerSelect(5)"
-            aria-label="search-filter-Manage your deals"
-            class="commandbar-button"
-          >
-            <span class="commandbar-span">Manage your deals</span></button
-          ><button
-            (click)="containerSelect(6)"
-            aria-label="search-filter-Measure sales performance"
-            class="commandbar-button"
-          >
-            <span class="commandbar-span"
-              >Measure sales performance</span
-            ></button
-          ><button
-            (click)="containerSelect(7)"
-            aria-label="search-filter-Automate your work"
-            class="commandbar-button"
-          >
-            <span class="commandbar-span">Automate your work</span></button
-          ><button
-            (click)="containerSelect(8)"
-            aria-label="search-filter-Admin Settings"
-            class="commandbar-button"
-          >
-            <span class="commandbar-span">Admin Settings</span></button
-          ><button
-            (click)="containerSelect(9)"
-            aria-label="search-filter-Recents"
-            class="commandbar-button"
-          >
-            <span class="commandbar-span">Recents</span>
+    <div class="d-flex left-container">
+      <div class="commandbar d-flex flex-column">
+        <button (click)="containerSelectAll()" class="commandbar-button">
+          <span class="commandbar-span">All</span>
+        </button>
+        <div *ngFor="let name of buttons; let i = index">
+          <button (click)="containerSelect(i)" class="commandbar-button">
+            <span class="commandbar-span">{{ name }}</span>
           </button>
         </div>
       </div>
     </div>
-
+    <!-- left-footer-->
     <div class="d-flex align-items-center end-panel">
       <span class="end-title">Need more help?</span>
       <div class="d-flex align-items-center" style="padding: 0; gap: 8px">
@@ -99,34 +31,28 @@
       </div>
     </div>
   </div>
+
   <!-- RIGHT PANEL -->
   <div class="right-panel">
     <!-- search bar -->
-    <div id="commandbar-wrapper">
-      <div class="d-flex" style="flex-flow: column wrap">
-        <div id="commandbar-control">
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <div class="commandbar-input">
-            <input
-              id="commandbar-input-search"
-              placeholder='Try "connect email"'
-              autocomplete="off"
-              role="combobox"
-              aria-controls="commandbar-menu"
-              aria-label='Try "connect email"'
-              aria-placeholder='Try "connect email"'
-              class="input-bar"
-              value=""
-            />
-          </div>
-        </div>
+    <div class="input-group search-btn">
+      <div class="search-bar">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input
+          type="search"
+          class="form-control"
+          placeholder='Try "connect email"'
+          [(ngModel)]="searchedText"
+          (ngModelChange)="filterResults()"
+        />
       </div>
     </div>
+
     <!-- right-content -->
     <div class="right-content">
       <div class="containers-list">
         <!-- container-1 -->
-        <div [ngClass]="flag[0] == 'true' ? 'class1' : 'class2'">
+        <ng-container *ngIf="all === true || id === 0">
           <span class="group-title">Set up your CRM</span>
           <ul class="list-group">
             <li class="list-group-item">
@@ -156,9 +82,9 @@
               >
             </li>
           </ul>
-        </div>
+        </ng-container>
         <!-- container-2 -->
-        <div [ngClass]="flag[1] == 'true' ? 'class1' : 'class2'">
+        <ng-container *ngIf="all === true || id === 1">
           <span class="group-title">Marketplace apps</span>
           <ul class="list-group">
             <li class="list-group-item">
@@ -193,9 +119,9 @@
               <i class="material-icons" aria-hidden="true" >extension</i>More apps
             </li>
           </ul>
-        </div>
+        </ng-container>
         <!-- container-3 -->
-        <div [ngClass]="flag[2] == 'true' ? 'class1' : 'class2'">
+        <ng-container *ngIf="all === true">
           <span class="group-title">Recommended for you</span>
           <ul class="list-group">
             <li class="list-group-item">
@@ -223,9 +149,9 @@
               email and calendar
             </li>
           </ul>
-        </div>
+        </ng-container>
         <!-- container-4 -->
-        <div [ngClass]="flag[3] == 'true' ? 'class1' : 'class2'">
+        <ng-container *ngIf="all === true || id === 3">
           <span class="group-title">Generate More Leads</span>
           <ul class="list-group">
             <li class="list-group-item">
@@ -245,9 +171,9 @@
               email and calendar
             </li>
           </ul>
-        </div>
+        </ng-container>
         <!-- container-5 -->
-        <div [ngClass]="flag[4] == 'true' ? 'class1' : 'class2'">
+        <ng-container *ngIf="all === true || id === 4">
           <span class="group-title">Engage with contacts</span>
           <ul class="list-group">
             <li class="list-group-item">
@@ -272,9 +198,9 @@
               activity
             </li>
           </ul>
-        </div>
+        </ng-container>
         <!-- container-6 -->
-        <div [ngClass]="flag[5] == 'true' ? 'class1' : 'class2'">
+        <ng-container *ngIf="all === true || id === 5">
           <span class="group-title">Manage your deals</span>
           <ul class="list-group">
             <li class="list-group-item">
@@ -290,9 +216,9 @@
               for your team
             </li>
           </ul>
-        </div>
+        </ng-container>
         <!-- container-7 -->
-        <div [ngClass]="flag[6] == 'true' ? 'class1' : 'class2'">
+        <ng-container *ngIf="all === true || id === 6">
           <span class="group-title">Measures sales performance</span>
           <ul class="list-group">
             <li class="list-group-item">
@@ -304,9 +230,9 @@
               report
             </li>
           </ul>
-        </div>
+        </ng-container>
         <!-- container-8 -->
-        <div [ngClass]="flag[7] == 'true' ? 'class1' : 'class2'">
+        <ng-container *ngIf="all === true || id === 7">
           <span class="group-title">Automate your work</span>
           <ul class="list-group">
             <li class="list-group-item">
@@ -318,9 +244,9 @@
               auto-assignment rule
             </li>
           </ul>
-        </div>
+        </ng-container>
         <!-- container-9 -->
-        <div [ngClass]="flag[8] == 'true' ? 'class1' : 'class2'">
+        <ng-container *ngIf="all === true || id === 8">
           <span class="group-title">Admin Settings</span>
           <ul class="list-group">
             <li class="list-group-item">
@@ -332,12 +258,62 @@
               and permissions
             </li>
           </ul>
-        </div>
+        </ng-container>
         <!-- container-10 -->
-        <div [ngClass]="flag[9] == 'true' ? 'class1' : 'class2'">
+        <ng-container *ngIf="all === true || id === 9">
           <span class="group-title">Recents</span>
-        </div>
+        </ng-container>
+        <!-- container-11 -->
+        <ng-container *ngIf="id === 2">
+          <span class="group-title">Generate More Leads</span>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <i class="fa fa-address-book" aria-hidden="true"></i>Import
+              contacts
+            </li>
+            <li class="list-group-item bb">
+              <i class="fa fa-address-book" aria-hidden="true"></i>Connect your
+              email and calendar
+            </li>
+          </ul>
+
+          <span class="group-title">Engage with contacts</span>
+          <ul class="list-group">
+            <li class="list-group-item bb">
+              <i class="fa fa-address-book" aria-hidden="true"></i>Create sales
+              sequence
+            </li>
+          </ul>
+
+          <span class="group-title">Manage your deals</span>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <i class="fa fa-address-book" aria-hidden="true"></i>Build your
+              deal pipeline
+            </li>
+          </ul>
+
+          <span class="group-title">Automate your work</span>
+          <ul class="list-group">
+            <li class="list-group-item bb">
+              <i class="fa fa-address-book" aria-hidden="true"></i>Create work
+              flow
+            </li>
+          </ul>
+
+          <span class="group-title">Admin Settings</span>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <i class="fa fa-address-book" aria-hidden="true"></i>Invite your
+              team
+            </li>
+          </ul>
+        </ng-container>
       </div>
+    </div>
+    <!-- right-footer -->
+    <div class="d-flex align-items-center">
+      <div class="right-footer"><span>Ctrl+</span><span>K</span></div>
     </div>
   </div>
 </div>
