@@ -41,7 +41,7 @@
         <input
           type="search"
           class="form-control"
-          placeholder="{{placeholderName}}"
+          placeholder="{{ placeholderName }}"
           [(ngModel)]="searchedText"
         />
       </div>
@@ -50,18 +50,33 @@
     <!-- right-content -->
     <div class="right-content">
       <div class="containers-list">
-        <ng-container *ngFor="let button of buttons; let i = index">
+        <ng-container *ngFor="let header of buttons; let i = index">
           <p class="group-title" *ngIf="i === id || all === true">
-            {{ button }}
+            {{ header }}
           </p>
           <ul class="list-group" *ngIf="i === id || all === true">
-            <ng-container *ngFor="let tab of tabs[i] | filter: searchedText">
-              <li class="list-group-item">
-                <div class="d-flex list-style">
-                  <span class="material-icons">{{ tab.iconName }}</span>
-                  <p>{{ tab.title }}</p>
-                </div>
-              </li>
+            <ng-container *ngIf="tabs[i] | filter: searchedText as results">
+              <ng-container *ngFor="let tab of results">
+                <li class="list-group-item">
+                  <a
+                    role="button"
+                    class="nav-link"
+                    href="{{ tab?.url }}"
+                    target="_blank"
+                  >
+                    <div class="d-flex list-style">
+                      <span class="material-icons">{{ tab.iconName }}</span>
+                      <p>{{ tab.title }}</p>
+                      <p class="place-last" *ngIf="tab.hotKey != ''">
+                        {{ tab.hotKey }}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ng-container>
+              <p *ngIf="results.length === 0">
+                <span class="text-muted not-found">No Results...</span>
+              </p>
             </ng-container>
           </ul>
         </ng-container>
