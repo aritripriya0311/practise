@@ -34,55 +34,55 @@ export class AppComponent implements OnInit {
         title: 'Import contacts', iconName: 'account_circle', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Connect your email', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Connect your email', iconName: 'email', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Add your first deal', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Add your first deal', iconName: 'currency_exchange', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: ' Send your first email', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: ' Send your first email', iconName: 'forward_to_inbox', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Automate processes using workflow', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Automate processes using workflow', iconName: 'lan', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Invite your team', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Invite your team', iconName: 'person_outline', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Get the mobile app', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: '->'
+        title: 'Get the mobile app', iconName: 'stay_current_portrait', url: 'https://satisfic.com/', hotKey: '->'
       },
     ],
     //tab2
     [
       {
-        title: 'Accounting and invoicing', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Accounting and invoicing', iconName: 'receipt_long', url: 'https://satisfic.com/', hotKey: ''
       },
       {
         title: 'Data sync', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Files and proposals', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Files and proposals', iconName: 'folder', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Collaboration', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Collaboration', iconName: 'group_add', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Customer support', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Customer support', iconName: 'face_6', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Contacts,email, and calendar', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Contacts,email, and calendar', iconName: 'account_circle', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Lead generation', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Lead generation', iconName: 'account_box', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'More apps', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'More apps', iconName: 'extension', url: 'https://satisfic.com/', hotKey: ''
       },
     ],
     //tab3
     [
       {
-        title: 'Import contacts', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: 'Ctrl+I'
+        title: 'Import contacts', iconName: 'account_circle', url: 'https://satisfic.com/', hotKey: 'Ctrl+I'
       },
       {
         title: 'Create sales sequence', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: 'Ctrl+S'
@@ -91,34 +91,34 @@ export class AppComponent implements OnInit {
         title: 'Build your deal pipeline', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: 'Ctrl+D'
       },
       {
-        title: 'Create workflow', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: 'Ctrl+H'
+        title: 'Create workflow', iconName: 'lan', url: 'https://satisfic.com/', hotKey: 'Ctrl+H'
       },
       {
-        title: 'Invite your team', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: 'Ctrl+U'
+        title: 'Invite your team', iconName: 'people', url: 'https://satisfic.com/', hotKey: 'Ctrl+U'
       },
       {
-        title: 'Connect your email and calendar', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: 'Ctrl+E'
+        title: 'Connect your email and calendar', iconName: 'email', url: 'https://satisfic.com/', hotKey: 'Ctrl+E'
       },
     ],
     //tab4
     [
       {
-        title: 'Integrate webforms', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Integrate webforms', iconName: 'article', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Track your website', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Track your website', iconName: 'work', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Import contacts', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: 'Ctrl+I'
+        title: 'Import contacts', iconName: 'account_circle', url: 'https://satisfic.com/', hotKey: 'Ctrl+I'
       },
       {
-        title: 'Connect your email and calendar', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: 'Ctrl+E'
+        title: 'Connect your email and calendar', iconName: 'email', url: 'https://satisfic.com/', hotKey: 'Ctrl+E'
       }
     ],
     //tab5
     [
       {
-        title: 'Send Mail', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Send Mail', iconName: 'forward_to_inbox', url: 'https://satisfic.com/', hotKey: ''
       },
       {
         title: 'Create sales sequence', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: 'Ctrl+S'
@@ -127,13 +127,13 @@ export class AppComponent implements OnInit {
         title: 'Score your contacts', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Set up phone', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Set up phone', iconName: 'wifi_calling', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Send SMS', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Send SMS', iconName: 'send_to_mobile', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Create sales activity', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Create sales activity', iconName: 'content_paste', url: 'https://satisfic.com/', hotKey: ''
       },
     ],
     //tab6
@@ -145,22 +145,22 @@ export class AppComponent implements OnInit {
         title: 'Create sales quotes', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Set quotas for your team', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Set quotas for your team', iconName: 'trending_up', url: 'https://satisfic.com/', hotKey: ''
       }
     ],
     //tab7
     [
       {
-        title: 'View sales dashboard', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'View sales dashboard', iconName: 'timeline', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'Create sales report', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Create sales report', iconName: 'leaderboard', url: 'https://satisfic.com/', hotKey: ''
       }
     ],
     //tab8
     [
       {
-        title: 'Create work flow', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: 'Ctrl+H'
+        title: 'Create work flow', iconName: 'play_circle', url: 'https://satisfic.com/', hotKey: 'Ctrl+H'
       },
       {
         title: 'Create auto-assignment rule', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
@@ -169,7 +169,7 @@ export class AppComponent implements OnInit {
     //tab9
     [
       {
-        title: 'Invite your team', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: 'Ctrl+U'
+        title: 'Invite your team', iconName: 'group', url: 'https://satisfic.com/', hotKey: 'Ctrl+U'
       },
       {
         title: 'Manage roles and permissions', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
@@ -178,25 +178,25 @@ export class AppComponent implements OnInit {
     //tab10
     [
       {
-        title: 'links', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'links', iconName: 'insert_link', url: 'https://satisfic.com/', hotKey: ''
       }
     ],
     //tab11
     [
       {
-        title: 'How to manage my contacts', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'How to manage my contacts', iconName: 'play_circle', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'How to create sales sequence', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'How to create sales sequence', iconName: 'play_circle', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'How to manage my deal pipeline', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'How to manage my deal pipeline', iconName: 'play_circle', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'How to manage users in added in my account', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'How to manage users in added in my account', iconName: 'play_circle', url: 'https://satisfic.com/', hotKey: ''
       },
       {
-        title: 'How to manage user roles and permissions', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'How to manage user roles and permissions', iconName: 'play_circle', url: 'https://satisfic.com/', hotKey: ''
       },
     ],
   ];
