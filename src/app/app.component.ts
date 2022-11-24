@@ -1,4 +1,4 @@
-import { AfterViewInit, OnInit } from '@angular/core';
+import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,12 +11,22 @@ export class AppComponent implements OnInit {
   searchedText: string = '';
   all: boolean = false;
   id: number = -1;
+  placeholderName: string = '';
 
   buttons: string[] = [
     'Set up your CRM', 'Marketplace apps', 'Recommended for you', 'Generate more leads',
     'Engage with contacts', 'Manage your deals', 'Measure sales performance', 'Automate your work',
-    'Admin Settings', 'Recents'
+    'Admin Settings', 'Recents', 'Help center'
   ];
+
+  placeholders = ['Welcome! Make the most of your CRM...', 'Search for "SlacK" ',
+    'Anything you are looking for?', 'Try "web forms"', 'To talk to your contacts , try "set up phone"',
+    'start with "add a deal"', 'Try "connect email"', 'Try "connect email"',
+    'Want to add team members? Try "invite team"...', 'Try "connect email"',
+    'Search "how to create workflows"'
+
+  ];
+
   tabs: any[] = [
     //tab1
     [
@@ -163,21 +173,39 @@ export class AppComponent implements OnInit {
       }
     ],
     //tab10
-    []
+    [],
+    //tab11
+    [
+      {
+        title: 'How to manage my contacts', iconName: 'near_me'
+      },
+      {
+        title: 'How to create sales sequence', iconName: 'near_me'
+      },
+      {
+        title: 'How to manage my deal pipeline', iconName: 'near_me'
+      },
+      {
+        title: 'How to manage users in added in my account', iconName: 'near_me'
+      },
+      {
+        title: 'How to manage user roles and permissions', iconName: 'near_me'
+      },
+    ],
   ];
 
   ngOnInit(): void {
     this.all = true;
+    this.placeholderName = 'Try "connect email"';
   }
 
   containerSelect(id: number) {
     this.all = false;
     this.id = id;
+    this.placeholderName = this.placeholders[id];
   }
   containerSelectAll() {
     this.all = true;
-  }
-  filterResults() {
-
+    this.placeholderName = 'Try "connect email"';
   }
 }
