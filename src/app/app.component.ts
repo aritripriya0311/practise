@@ -209,30 +209,37 @@ export class AppComponent implements OnInit {
       //console.log("ctrl k")
     }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 73) {
+      e.preventDefault();
       window.location.href="https://satisfic.com/";
       //console.log("ctrl i")
     }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 69) {
+      e.preventDefault();
       window.location.href="https://satisfic.com/";
       //console.log("ctrl e")
     }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 83) {
+      e.preventDefault();
       window.location.href="https://satisfic.com/";
       //console.log("ctrl s")
     }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 68) {
+      e.preventDefault();
       window.location.href="https://satisfic.com/";
       //console.log("ctrl d")
     }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 72) {
+      e.preventDefault();
       window.location.href="https://satisfic.com/";
       //console.log("ctrl h")
     }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 85) {
+      e.preventDefault();
       window.location.href="https://satisfic.com/";
       //console.log("ctrl u")
     }
     if(e.keyCode == 39) {
+      e.preventDefault();
       window.location.href="https://satisfic.com/";
       //console.log("->")
     }
