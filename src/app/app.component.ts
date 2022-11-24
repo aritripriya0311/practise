@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     //tab1
     [
       {
-        title: 'Import contacts', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
+        title: 'Import contacts', iconName: 'account_circle', url: 'https://satisfic.com/', hotKey: ''
       },
       {
         title: 'Connect your email', iconName: 'near_me', url: 'https://satisfic.com/', hotKey: ''
@@ -205,32 +205,36 @@ export class AppComponent implements OnInit {
   handleKeyDown(e: any) {
     if((e.ctrlKey || e.metaKey) && e.keyCode == 75) {
       e.preventDefault();
-      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
-      console.log("ctrl k")
+      window.location.href="https://satisfic.com/";
+      //console.log("ctrl k")
     }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 73) {
-      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
-      console.log("ctrl i")
+      window.location.href="https://satisfic.com/";
+      //console.log("ctrl i")
     }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 69) {
-      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
-      console.log("ctrl e")
+      window.location.href="https://satisfic.com/";
+      //console.log("ctrl e")
     }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 83) {
-      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
-      console.log("ctrl s")
+      window.location.href="https://satisfic.com/";
+      //console.log("ctrl s")
     }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 68) {
-      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
-      console.log("ctrl d")
+      window.location.href="https://satisfic.com/";
+      //console.log("ctrl d")
     }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 72) {
-      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
-      console.log("ctrl h")
+      window.location.href="https://satisfic.com/";
+      //console.log("ctrl h")
     }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 85) {
-      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
-      console.log("ctrl u")
+      window.location.href="https://satisfic.com/";
+      //console.log("ctrl u")
+    }
+    if(e.keyCode == 39) {
+      window.location.href="https://satisfic.com/";
+      //console.log("->")
     }
   }
 
@@ -249,7 +253,5 @@ export class AppComponent implements OnInit {
     this.placeholderName = 'Try "connect email"';
   }
 
-
-  
 
 }
