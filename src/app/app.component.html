@@ -43,6 +43,7 @@
           class="form-control"
           placeholder="{{placeholderName}}"
           [(ngModel)]="searchedText"
+          (keydown) = "handleKeyDown($event)"
         />
       </div>
     </div>

@@ -1,5 +1,5 @@
 import { OnInit } from '@angular/core';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
 
 @Component({
@@ -178,22 +178,55 @@ export class AppComponent implements OnInit {
     //tab11
     [
       {
-        title: 'How to manage my contacts', iconName: 'near_me'
+        title: 'How to manage my contacts', iconName: 'play_circle'
       },
       {
-        title: 'How to create sales sequence', iconName: 'near_me'
+        title: 'How to create sales sequence', iconName: 'play_circle'
       },
       {
-        title: 'How to manage my deal pipeline', iconName: 'near_me'
+        title: 'How to manage my deal pipeline', iconName: 'play_circle'
       },
       {
-        title: 'How to manage users in added in my account', iconName: 'near_me'
+        title: 'How to manage users in added in my account', iconName: 'play_circle'
       },
       {
-        title: 'How to manage user roles and permissions', iconName: 'near_me'
+        title: 'How to manage user roles and permissions', iconName: 'play_circle'
       },
     ],
   ];
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyDown(e: any) {
+    if((e.ctrlKey || e.metaKey) && e.keyCode == 75) {
+      e.preventDefault();
+      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
+      console.log("ctrl k")
+    }
+    if((e.ctrlKey || e.metaKey) && e.keyCode == 73) {
+      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
+      console.log("ctrl i")
+    }
+    if((e.ctrlKey || e.metaKey) && e.keyCode == 69) {
+      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
+      console.log("ctrl e")
+    }
+    if((e.ctrlKey || e.metaKey) && e.keyCode == 83) {
+      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
+      console.log("ctrl s")
+    }
+    if((e.ctrlKey || e.metaKey) && e.keyCode == 68) {
+      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
+      console.log("ctrl d")
+    }
+    if((e.ctrlKey || e.metaKey) && e.keyCode == 72) {
+      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
+      console.log("ctrl h")
+    }
+    if((e.ctrlKey || e.metaKey) && e.keyCode == 85) {
+      window.location.href="https://www.udemy.com/course/advanced-javascript-concepts/";
+      console.log("ctrl u")
+    }
+  }
 
   ngOnInit(): void {
     this.all = true;
@@ -211,6 +244,6 @@ export class AppComponent implements OnInit {
   }
 
 
-
+  
 
 }
