@@ -203,11 +203,6 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(e: any) {
-    if((e.ctrlKey || e.metaKey) && e.keyCode == 75) {
-      e.preventDefault();
-      window.location.href="https://satisfic.com/";
-      //console.log("ctrl k")
-    }
     if((e.ctrlKey || e.metaKey) && e.keyCode == 73) {
       e.preventDefault();
       window.location.href="https://satisfic.com/";
