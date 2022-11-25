@@ -88,18 +88,9 @@ button:focus {
   color: #bbdcfe;
 }
 
-.right-content {
-  height: 327px;
-  transition: height 0.1s ease-out 0s;
-  border: none;
-  border-radius: 0px;
-  margin-top: 0px;
-  background: none;
-}
-
 .containers-list {
-  min-height: 520px;
-  max-height: 95vh;
+  min-height: 104vh;
+  max-height: 104vh;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
@@ -171,19 +162,6 @@ ul {
   background: none !important;
 }
 
-.right-footer {
-  background-color: rgb(207, 215, 223);
-  border-radius: 4px;
-  border: 1px solid transparent;
-  font-size: 12px;
-  padding: 2px 4px;
-  color: rgb(18, 52, 77);
-  font-family: 'SF Pro Text', sans-serif;
-  font-weight: 400;
-  position: relative;
-  top: 43vh;
-  left: 95%
-}
 
 ::placeholder {
   color: grey;
@@ -196,14 +174,26 @@ ul {
   margin-left: 15px;
 }
 
-.list-style .place-last {
+.list-style .place-last,
+.right-footer {
   color: grey;
   margin-left: auto;
+  margin-right: 1%;
 }
 
-.list-style p.place-last {
+.list-style p.place-last,
+span.right-footer {
   padding: 2px 4px;
   border-style: 1px solid transparent;
   border-radius: 4px;
   background-color: rgb(207, 215, 223);
+}
+
+.right-footer {
+  margin-right: 2%;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
 }
